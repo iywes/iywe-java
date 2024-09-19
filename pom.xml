@@ -106,7 +106,7 @@
           <artifactId>spotbugs-maven-plugin</artifactId>
           <version>${spotbugs.plugin.version}</version>
           <configuration>
-            <excludeFilterFile>./config/spotbug/spotBugIgnore.xml</excludeFilterFile>
+            <excludeFilterFile>.config/spotbug/spotBugIgnore.xml</excludeFilterFile>
           </configuration>
         </plugin>
         <plugin>
@@ -123,7 +123,7 @@
               <sourceDirectory>src/main/java</sourceDirectory>
             </sourceDirectories>
             <configLocation>.config/checkstyle/checkstyle.xml</configLocation>
-            <suppressionsLocation>./config/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
+            <suppressionsLocation>.config/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
             <includeTestSourceDirectory>false</includeTestSourceDirectory>
             <enableRulesSummary>true</enableRulesSummary>
           </configuration>

@@ -7,8 +7,12 @@
   <packaging>pom</packaging>
   <version>1.0.0</version>
 
+  <name>iywe-java</name>
+  <description>improve your work efficiency</description>
+  <url>https://github.com/iywes/iywe-java</url>
+
   <modules>
-    <module>SubModule</module>
+    <module>common</module>
   </modules>
 
   <properties>
@@ -21,11 +25,53 @@
     <junit.version>5.9.1</junit.version>
   </properties>
 
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/iywes/iywe-java/issues</url>
+  </issueManagement>
+  <inceptionYear>2021</inceptionYear>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://github.com/iywes/iywe-java/blob/main/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>releases</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/iywes/iywe-java.git</connection>
+    <developerConnection>scm:git:git@github.com:iywes/iywe-java.git</developerConnection>
+    <url>https://github.com/iywes/iywe-java</url>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>wangjie-fourth</id>
+      <name>wang jie</name>
+      <email>wangjie_fourth@163.com</email>
+      <roles>
+        <role>owner</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.github.fourth</groupId>
-        <artifactId>SubModule</artifactId>
+        <artifactId>common</artifactId>
         <version>1.0.0</version>
       </dependency>
       <dependency>
@@ -76,7 +122,7 @@
             <sourceDirectories>
               <sourceDirectory>src/main/java</sourceDirectory>
             </sourceDirectories>
-            <configLocation>./config/checkstyle/checkstyle.xml</configLocation>
+            <configLocation>.config/checkstyle/checkstyle.xml</configLocation>
             <suppressionsLocation>./config/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
             <includeTestSourceDirectory>false</includeTestSourceDirectory>
             <enableRulesSummary>true</enableRulesSummary>
@@ -94,8 +140,25 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <configuration>
+              <keyname>40F5A6241C60EC549A369C51FDF1BC3484E061B8</keyname>
+              <passphraseServerId>40F5A6241C60EC549A369C51FDF1BC3484E061B8</passphraseServerId>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <!-- JUnit 5 requires Surefire version 2.22.0 or higher -->
         <version>2.22.0</version>
       </plugin>
       <plugin>

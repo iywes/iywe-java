@@ -7,7 +7,7 @@
 <a href="https://github.com/iywes/iywe-java/graphs/contributors"><img src="https://img.shields.io/github/contributors/iywes/iywe-java" alt="GitHub Contributors"></a>
 <a href="https://github.com/iywes/iywe-java/stargazers"><img src="https://img.shields.io/github/stars/iywes/iywe-java" alt="GitHub Stars"></a>
 <a href="https://github.com/iywes/iywe-java/fork"><img src="https://img.shields.io/github/forks/iywes/iywe-java" alt="GitHub Forks"></a>
-
+[![Maven Package](https://github.com/iywes/iywe-java/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/iywes/iywe-java/actions/workflows/maven-publish.yml)
 
 # iywe-java
 提高编码效率，主要记录一些未来可能会重复用到的代码

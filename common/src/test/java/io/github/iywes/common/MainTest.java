@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class MainTest {
 
     @Test
-    public void test() {
+    void test() {
         new Main().test();
     }
 

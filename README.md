@@ -1,4 +1,4 @@
-<a href="https://codecov.io/gh/iywes/iywe-java/branch/main"><img src="https://img.shields.io/codecov/c/github/iywes/iywe-java/main?logo=codecov&logoColor=white" alt="Coverage Status"></a>
+<a href="https://app.codecov.io/github/iywes/iywe-java/"><img src="https://codecov.io/github/iywes/iywe-java/coverage.svg?branch=main" alt="Coverage Status"></a>
 <a href="https://github.com/iywes/iywe-java/actions/workflows/build_and_test.yaml">
 <img src="https://img.shields.io/github/actions/workflow/status/iywes/iywe-java/build_and_test.yaml?branch=main&logo=github&logoColor=white&label=fast ci" alt="Github Workflow Build Status">
 </a>
@@ -11,4 +11,3 @@
 
 # iywe-java
 提高编码效率，主要记录一些未来可能会重复用到的代码
-
